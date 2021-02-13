@@ -10,14 +10,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="referrer" content="no-referrer">
 
-        <link rel="stylesheet" href="{{ get_url(path='fonts.css') }}">
-        <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
-
         <title>{% block htmltitle %}{{ config.title }}{% endblock htmltitle %}</title>
 
         {% if config.generate_rss %}
             <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path='rss.xml') }}">
         {% endif %}
+        <script type="text/javascript">
+        window.$bloom = { project: '01779b69-e002-d356-e522-b5931e56b9bb' };
+        (function(){d=document;s=d.createElement("script");s.src="https://bloom.sh/libs/bloom.js"; s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+        </script>
+        <link rel="stylesheet" href="{{ get_url(path='fonts.css') }}">
+        <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+
+
     </head>
     <body>
         {% block body %}
